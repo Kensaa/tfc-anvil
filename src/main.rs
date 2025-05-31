@@ -54,10 +54,16 @@ fn main() {
         sum + actions.get(actions_name[*action_index]).unwrap()
     });
 
-    let resolve_res = resolve(&actions, offset + action_offset);
+    println!("{}", action_offset);
+    let resolve_res = resolve(&actions, offset - action_offset);
+
     println!("Result:");
     for a in resolve_res {
         println!("- {}", a);
+    }
+    println!();
+    for selected_action in selected_actions.iter().rev() {
+        println!("- {}", actions_name[*selected_action])
     }
 }
 
