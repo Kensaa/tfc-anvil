@@ -1,4 +1,5 @@
 use dialoguer::{Input, Select, theme::ColorfulTheme};
+use indexmap::IndexMap;
 use itertools::Itertools;
 use std::collections::{HashMap, HashSet};
 
@@ -6,7 +7,7 @@ const MIN_VAL: i32 = 0;
 const MAX_VAL: i32 = 150;
 
 fn main() {
-    let mut actions: HashMap<&str, i32> = HashMap::new();
+    let mut actions: IndexMap<&str, i32> = IndexMap::new();
     actions.insert("light hit", -3);
     actions.insert("medium hit", -6);
     actions.insert("hard hit", -9);
@@ -67,7 +68,7 @@ fn main() {
     }
 }
 
-fn resolve(actions: &HashMap<&str, i32>, target: i32) -> Vec<String> {
+fn resolve(actions: &IndexMap<&str, i32>, target: i32) -> Vec<String> {
     let mut distances: HashMap<i32, u32> = HashMap::new();
     let mut visited: HashSet<i32> = HashSet::new();
     let mut came_from: HashMap<i32, i32> = HashMap::new();
