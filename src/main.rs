@@ -55,7 +55,6 @@ fn main() {
         sum + actions.get(actions_name[*action_index]).unwrap()
     });
 
-    println!("{}", action_offset);
     let resolve_res = resolve(&actions, offset - action_offset);
 
     println!("Result:");
