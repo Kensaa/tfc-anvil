@@ -13,7 +13,7 @@ fn main() {
     actions.insert("hard hit", -9);
     actions.insert("hard hit", -9);
     actions.insert("draw", -15);
-
+    actions.insert("none", 0);
     actions.insert("punch", 2);
     actions.insert("bend", 7);
     actions.insert("upset", 13);
